@@ -2,7 +2,9 @@
 @import 'plugins'
 @import 'media-queries'
 @import 'mixins'
+@import 'scrollbar'
 @import 'navbar'
+@import 'button'
 
 /* General
 *
@@ -35,3 +37,56 @@ button
 
 .dark-color
     color: $dark-color
+
+/* Main */
+.main
+    display: flex
+    flex-direction: column
+
+    @include tablet
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        height: 75vh
+        margin: 0 $medium-spacing   
+
+    @include desktop
+        margin: 0 100px            
+
+    &-text
+        width: 100%
+        text-align: center
+        margin-top: $large-spacing
+
+        @include tablet
+            width: 50% 
+            margin: 0
+
+        h2
+            margin: 0
+
+        h1
+            font-weight: $font-weight-bold
+            margin: $medium-spacing 0
+
+        p
+            margin: 0 $small-spacing $large-spacing
+
+            @include tablet
+                margin: 0 0 $large-spacing
+
+    &-image 
+        width: 100%
+        text-align: center
+        margin-top: $large-spacing
+
+        @include tablet
+            width: 50%
+            margin: 0
+
+        img
+            width: 300px
+
+            @include desktop
+                width: 100%
+           
