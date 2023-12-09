@@ -1,0 +1,74 @@
+/* Navbar */
+.navbar
+    background-color: transparent
+    @include border-bottom 
+
+    &-container
+        @extend %base-navbar-center
+        padding: $medium-spacing $small-spacing
+
+        @include tablet
+            padding: $medium-spacing
+
+        @include desktop
+            padding: $medium-spacing 100px         
+
+    &-brand
+        font-size: 24px
+        font-weight: $font-weight-bold
+
+        &:hover
+            color: $primary-color
+
+        span
+            font-weight: $font-weight-bold
+
+            &:hover
+                color: $dark-color
+
+    &-button 
+        background-color: transparent
+        font-size: 32px
+
+        @include desktop
+            display: none           
+
+    &-menu 
+        display: none
+
+        @include desktop
+            display: block
+    
+    &-toggle
+        display: none
+
+    &-items 
+        margin: 0
+        padding-left: $small-spacing
+
+        @include tablet
+            padding-left: $medium-spacing
+        
+        @include desktop
+            display: flex
+            flex-direction: row
+            padding: 0
+
+    &-item 
+        margin: $small-spacing 0
+
+        @include desktop
+            margin: 0
+            padding-left: $large-spacing
+
+    &-link 
+        font-size: $font-size-text
+        font-weight: $font-weight-bold
+        transition: .5s
+
+        &:hover
+            color: $primary-color
+
+        @include desktop
+            font-size: 18px               
+      
