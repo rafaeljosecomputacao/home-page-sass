@@ -1,6 +1,6 @@
-/* Navbar */
+/* Navbar
 .navbar
-    background-color: transparent
+    background-color: $dark-color
     @include border-bottom 
 
     &-container
@@ -15,28 +15,29 @@
 
     &-brand
         font-size: 24px
-        font-weight: $font-weight-bold
+        font-weight: 700
 
         &:hover
             color: $primary-color
 
         span
-            font-weight: $font-weight-bold
+            font-weight: 700
 
             &:hover
-                color: $dark-color
+                color: $light-color
 
     &-button 
         background-color: transparent
         font-size: 32px
+        padding: 0
 
-        @include desktop
+        @include laptop
             display: none           
 
     &-menu 
         display: none
 
-        @include desktop
+        @include laptop
             display: block
     
     &-toggle
@@ -49,7 +50,7 @@
         @include tablet
             padding-left: $medium-spacing
         
-        @include desktop
+        @include laptop
             display: flex
             flex-direction: row
             padding: 0
@@ -57,18 +58,17 @@
     &-item 
         margin: $small-spacing 0
 
-        @include desktop
+        @include laptop
             margin: 0
             padding-left: $large-spacing
 
     &-link 
         font-size: $font-size-text
-        font-weight: $font-weight-bold
-        transition: .5s
+        font-weight: 700       
 
-        &:hover
-            color: $primary-color
+        @include laptop
+            font-size: 18px 
+            transition: .5s   
 
-        @include desktop
-            font-size: 18px               
-      
+            &:hover
+                color: $primary-color                

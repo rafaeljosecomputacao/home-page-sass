@@ -9,7 +9,6 @@
 /* General
 *
     font-family: 'Roboto', sans-serif
-    font-weight: $font-weight-regular
     
 body
     background-color: $background-color
@@ -38,7 +37,7 @@ button
 .dark-color
     color: $dark-color
 
-/* Main */
+/* Main
 .main
     display: flex
     flex-direction: column
@@ -66,7 +65,7 @@ button
             margin: 0
 
         h1
-            font-weight: $font-weight-bold
+            font-weight: 700
             margin: $medium-spacing 0
 
         p
@@ -85,8 +84,10 @@ button
             margin: 0
 
         img
-            width: 300px
+            width: 280px
+
+            @include tablet
+                width: 300px
 
             @include desktop
-                width: 100%
-           
+                width: 100%       

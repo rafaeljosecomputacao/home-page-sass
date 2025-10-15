@@ -1,12 +1,15 @@
-/* Button */
+/* Button
 .button
     background-color: $primary-color
+    border: 1px solid $primary-color
     font-size: 20px
-    font-weight: $font-weight-bold
+    font-weight: 700
     padding: $small-spacing $large-spacing
-    cursor: pointer
-    transition: .5s
+    
+    @include laptop
+        cursor: pointer
+        transition: .5s
 
-    &:hover
-        background-color: $dark-color
-        color: $light-color
+        &:hover
+            background-color: $dark-color
+            color: $primary-color

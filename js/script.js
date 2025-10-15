@@ -1,4 +1,4 @@
-/* Open the navbar links menu on mobile */
+// Open the navbar links menu on mobile
 function navbarToggle() {
     let navbartoggle = document.querySelector('.navbar-toggle');
 

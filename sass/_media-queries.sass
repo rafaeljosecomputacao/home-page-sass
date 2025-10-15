@@ -1,8 +1,11 @@
 @mixin tablet
-    @media (min-width: $tablet-width)
+    @media (min-width: 768px)
         @content
+
+@mixin laptop
+    @media (min-width: 992px) 
+        @content 
     
 @mixin desktop 
-    @media (min-width: $desktop-width) 
-        @content
-    
+    @media (min-width: 1024px) 
+        @content    
